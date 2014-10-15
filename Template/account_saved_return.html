@@ -1,0 +1,42 @@
+%%Panel.HTMLHead%%
+    <body>
+        %%Panel.DrawerMenu%%
+        <div class="page">
+            %%Panel.Header%%
+            <div class="main">
+                <div class="inner">
+                    %%Panel.WrapperBanner%%
+					<div class="Block Breadcrumb Moveable Panel" id="AccountBreadcrumb">
+                        <ul>
+                            <li><a href="%%GLOBAL_ShopPathNormal%%/">%%LNG_Home%%</a></li>
+                            <li><a href="%%GLOBAL_ShopPath%%/account.php">%%LNG_YourAccount%%</a></li>
+                            <li>%%LNG_ReturnRequests%%</li>
+                        </ul>
+                    </div>
+                    <div class="Left accountleft" id="LayoutColumn1">
+                        %%Panel.SideAccountMenu%%
+                    </div>
+                    <div class="Content" id="LayoutColumn2">
+                        <div class="Block">
+                            <h2>%%LNG_SubmitNewReturn%%</h2>
+                            <div class="BlockContent">
+                                <p class="SuccessMessage">
+                                    %%LNG_ReturnRequestSubmitted%%
+                                </p>
+                                <p>%%LNG_ReturnSubmittedInfo%%</p>
+                                <div style="display: %%GLOBAL_HideReturnInstructions%%">
+                                    <h3>%%LNG_ReturnInstructions%%</h3>
+                                    <p>%%GLOBAL_ReturnInstructions%%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Right" id="LayoutColumn3">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            %%Panel.Footer%%
+        </div>
+    </body>
+</html>

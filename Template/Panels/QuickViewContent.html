@@ -1,0 +1,172 @@
+<script type="text/javascript">
+    $('#productDetailsAddToCartForm input[type="radio"]').not('.productOptionPickListSwatch input[type="radio"], .productOptionViewRectangle input[type="radio"]').uniform();
+    $('#productDetailsAddToCartForm select').uniform();
+    $('#productDetailsAddToCartForm .fileInput input').uniform();
+</script>
+
+<div id="QuickViewContent">
+    
+    <div class="qprod">
+            <div id="QuickViewImage" class="ProductThumbImage">
+                <a href="%%GLOBAL_QuickViewProductURL%%">
+                    <img src="%%GLOBAL_ThumbImageURL%%" />
+                </a>
+            </div>
+        
+        <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js?domready=1#pubid=ra-4e94ed470ee51e32"></script>
+        <!-- AddThis Button BEGIN -->
+        <div id="QuickViewShareLinksContainer"  class="addthis_toolbox addthis_default_style">
+            %%GLOBAL_QuickViewShareLinks%%
+        </div>
+        <!-- div id="QuickViewFacebookContainer" style="float:left;">%%GLOBAL_QuickViewFacebookLikeButton%%</div -->
+        
+    </div>
+    
+    <div id="QuickViewProductDetails">
+        
+        <script language="javascript" type="text/javascript">
+            QuickView.attachFormValidator();
+        </script>
+        
+        <form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%) %%GLOBAL_FastCartButtonJs%%"  enctype="multipart/form-data" id="productDetailsAddToCartForm">
+            
+            <input type="hidden" name="action" value="add" />
+            <input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+            <input type="hidden" name="variation_id" class="CartVariationId" value="" />
+            <input type="hidden" name="currency_id" value="" />
+            
+            
+            <div id="ProductDetails" class="ProductDetailsGrid productDetails ProductAddToCart">                            
+                <!-- Begin Product Details Table -->                
+                <div class="quickNameWrap">
+                    <h1>%%GLOBAL_QuickViewProductName%%</h1>
+                    <a href="%%GLOBAL_QuickViewProductURL%%">View Full Product Details</a>
+                </div>
+                
+                <div class="DetailRow clearfix" style="display: %%GLOBAL_HideRating%%">
+                    <!-- QuickViewTopNavRating : Customizable 'starRating' class for rating stars 'starRatingGrey' for grey ones  -->                    
+                    <img  src="%%GLOBAL_IMG_PATH%%/IcoRating0%%GLOBAL_Rating%%.png" alt="%%GLOBAL_Rating%% Star Rating" style="%%GLOBAL_HideProductRating%%" width="78" height="13"  />
+                </div>
+                
+                <div class="DetailRow clearfix PriceRow p-price" style="%%GLOBAL_HidePrice%%">
+                    <div class="Value">
+                        <span class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%</span>
+                    </div>
+                </div>
+                
+                <div class="s-price">
+                    <div class="DetailRow clearfix RetailPrice" style="display: %%GLOBAL_HideRRP%%">
+                        <div class="Label">RRP</div>
+                        <div class="Value">
+                            %%GLOBAL_RetailPrice%% 
+                        </div>
+                    </div>
+                    %%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%
+                </div>
+                <div class="clear"></div>
+                
+                <div class="DetailRow prodDesc clearfix">
+                    <h2>Product Description</h2>
+                    <div id="quickDesc"></div>
+                </div>
+                
+                <div class="DetailRow clearfix" style="display: %%GLOBAL_DisplayAdd%%">
+                    <div class="productAttributeLabel QuantityInput" style="display: %%GLOBAL_DisplayAddQty%%">
+                        %%LNG_QuantityFull%%:
+                    </div>
+                    <div class="productAttributeValue">
+                        <span style="display: %%GLOBAL_DisplayAddQty%%;">
+                            %%GLOBAL_AddToCartQty%%
+                        </span>
+                    </div>
+                </div>                              
+                
+                <div class="DetailRow clearfix" style="%%GLOBAL_HideProductAttributeList%%">
+                    %%GLOBAL_ProductAttributeList%%
+                </div>
+                
+                <div class="OutOfStockMessageWrap">
+                    <p class="OutOfStockMessage">%%SNIPPET_SideAddItemSoldOut%%</p>
+                </div>
+                
+                <div class="DetailRow clearfix addToCart">
+                    <div class="productAttributeValue">
+                        <input class="btn" value="Add to shopping bag" type="submit" style="display: %%GLOBAL_DisplayAdd%%;">
+                        <span style="display: %%GLOBAL_DisplayAdd%%;"> or </span>
+                        <a href="%%GLOBAL_QuickViewProductURL%%">%%LNG_QuickViewViewDetailsText%%</a>
+                    </div>
+                    <div class="share">
+                        <a class="fb" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=%%GLOBAL_QuickViewProductURL%%&amp;t=%%GLOBAL_QuickViewProductName%%', 'facebook-share-dialog', 'width=626,height=436'); return false;"></a>
+                        <a class="tw" href="#" onclick="window.open('http://twitter.com/home?status=%%GLOBAL_QuickViewProductName%%:+%%GLOBAL_QuickViewProductURL%%', 'Tweet-dialog', 'width=626,height=436'); return false;"></a>                        
+                        <a class="pin" href="#" count-layout="none" onclick="window.open('http://pinterest.com/pin/create/button/?url=%%GLOBAL_QuickViewProductURL%%&amp;media=%%GLOBAL_ThumbImageURL%%&amp;description=%%GLOBAL_QuickViewProductName%%', 'pin-it-dialog', 'width=626,height=436'); return false;"></a>  
+                    </div>
+                </div>
+                
+                <!-- End Product Details Table -->
+                
+            </div>
+        </form>
+        
+        <script>
+//<![CDATA[        
+function processData(item){
+    return function(data){
+    var desc = jQuery(data).find("#ProductDescription .ProductDescriptionContainer").text();
+    desc = desc.substr(0,202);
+    jQuery("#quickDesc").html(desc+'...');
+  }
+}
+
+jQuery(document).ready(function(){
+        var path = '%%GLOBAL_QuickViewProductURL%%';
+        if(path!="") {
+            path = path.replace("http://","//").replace("https://","//");
+            var item = path;
+            $.ajax({
+              url: path,
+              type: "GET",
+               async: true,
+                 success: processData(item)
+            });
+        }
+
+if($('.OutOfStockMessage').text()==''){ $('.OutOfStockMessage').hide(); }
+            
+    var fileFields = $('#productDetailsAddToCartForm').find("input[type=file]");
+    fileFields.each(function() {
+        if(this.value != '') {
+            var namePart = this.name.replace(/^.*\[/, '');
+            var fieldId = namePart.replace(/\].*$/, '');
+            var fileTypes = document.getElementById('ProductFileType_'+fieldId).value;
+
+            fileTypes = ','+fileTypes.replace(' ', '').toLowerCase()+','
+            var ext = this.value.replace(/^.*\./, '').toLowerCase();
+
+            if(fileTypes.indexOf(','+ext+',') == -1) {
+                alert(lang.InvalidFileTypeJS);
+                this.focus();
+                this.select();
+                valid = false;
+            }
+
+        }
+    });
+            
+});
+     //]]>   
+        </script>
+        
+        <script language="javascript" type="text/javascript">
+            //<![CDATA[
+            lang.OptionMessage = "%%GLOBAL_OptionMessage%%";
+            lang.VariationSoldOutMessage = "%%LNG_VariationSoldOutMessage%%";
+            lang.InvalidQuantity = "%%LNG_InvalidQuantity%%";
+            lang.EnterRequiredField = "%%LNG_EnterRequiredField%%";
+            lang.InvalidFileTypeJS = "%%LNG_InvalidFileTypeJS%%";
+            var ShowAddToCartQtyBox = "%%GLOBAL_ShowAddToCartQtyBox%%";
+            %%GLOBAL_ProductMinMaxQtyJavascript%%
+            //]]>
+            
+        </script>
+        %%GLOBAL_EventDateJavascript%%
+    </div>

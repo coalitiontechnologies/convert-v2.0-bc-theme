@@ -1,0 +1,133 @@
+// See the README for a guide on how to compile using LESS
+/*
+
+!!!!!!!!!! WARNING !!!!!!!!!!
+
+If you edit theme.css, your changes will be overwritten by any compilation of theme.less
+Please remember to replicate your changes in init.less, or just make your changes in another file if possible
+
+!!!!!!!!!! WARNING !!!!!!!!!!
+
+*/
+
+/* @import "internal-variables.less"; */
+@import "style-editor-variables.less";
+/* @import "init.less"; */
+/* @import "optimized-checkout.less"; */
+
+
+/* Importing init.less Manually */
+.SortBox, .AddToWishlistLink .wishlist-button { color: @color-theme-color; }
+.TopMenu { color: @color-top-menu-text; }
+.TopMenu a { color: @color-top-menu-text; }
+.TopMenu a:hover { color: lighten(@color-top-menu-text,5%); }
+#Header{ background-color:@color-header-background; }
+.header-logo h1 a{ color:@color-store-name; }
+.currency-converter > p > span,
+.CurrencyList a { color: @color-theme-color; }
+.PageMenu .sf-menu > li > a,
+.header .category-list > li > a{ color:@color-menu-text; }
+.PageMenu .sf-menu > li > a:hover,
+.PageMenu .category-list > li > ul,
+.PageMenu li ul ul{ background-color:@color-dropdown-background; }
+
+/* General */
+.btn,
+.facet-container .facet-form .btn {
+    background-color: @color-theme-color;
+	border-color:darken(@color-theme-color, 5%); 
+    color: lighten(@color-theme-color, 100%) !important;
+}
+.btn:hover{ background-color:darken(@color-theme-color, 5%); }
+
+div.uploader span.action { background-color: @color-theme-color; }
+a,
+.Left li li a,
+.Left #SideCategoryList li a,
+.Left .slist li a,
+.Left .afterSideShopByBrand a,
+.Left #GiftCertificatesMenu li a,
+.Left #SideAccountMenu li a,
+.Left #SideCategoryList li li a,
+.Left .slist li li a,
+.TabNav li.Active a,
+.ModalContent h4 a:hover,
+.footer a:hover { color: @color-theme-color; }
+.page{ background-color: @color-page-background; }
+
+/* Home Page Styles */
+#HomeFeaturedProducts h3,
+#SideTopSellers h3,
+#HomeNewProducts h3,
+#SimilarProductsByCustomerViews h2,
+#SideProductRelated h2{ color:@color-section-headings; }
+
+#home .ProductList .ProductDetails a,
+#SideProductRelated .ProductDetails a,
+#SimilarProductsByCustomerViews .ProductDetails a,
+#SimilarMultiProductsByCustomerViews .prices,
+#CategoryContent .ProductDetails a,
+#TagProducts .ProductDetails a { color: @color-product-names; }
+
+#home .ProductList .prices,
+#SideProductRelated .prices,
+#SimilarProductsByCustomerViews .prices,
+#SimilarMultiProductsByCustomerViews .prices{ color: @color-product-prices; }
+
+#home .ProductList .ProductActionAdd a.btn,
+#SideProductRelated .ProductActionAdd a.btn,
+#SimilarProductsByCustomerViews .ProductActionAdd a.btn,
+#SimilarMultiProductsByCustomerViews .ProductActionAdd a.btn{ background-color: @color-buttons; border-color:darken(@color-buttons, 5%); }
+
+#home .ProductList .ProductActionAdd a.btn:hover,
+#SideProductRelated .ProductActionAdd a.btn:hover,
+#SimilarProductsByCustomerViews .ProductActionAdd a.btn:hover,
+#SimilarMultiProductsByCustomerViews .ProductActionAdd a.btn:hover{ background-color: darken(@color-buttons, 5%); }
+
+/* Category Page */
+.category .TitleHeading{ color:@color-category-title; }
+.CategoryPagination .PagingList li.ActivePage{ background-color:@color-theme-color; }
+
+#CategoryContent .ProductList .pname,
+#CategoryContent .ProductList .p-name a,
+#TagProducts .ProductList .pname,
+#TagProducts .ProductList .p-name a{ color: @color-category-product-names; }
+
+#CategoryContent .prices,
+#CategoryContent .p-price,
+#TagProducts .prices,
+#TagProducts .p-price{ color: @color-category-product-prices; }
+
+#CategoryContent .ProductActionAdd a.btn,
+#TagProducts .ProductActionAdd a.btn{ background-color: @color-category-list-buttons; border-color:darken(@color-category-list-buttons, 5%); }
+
+#CategoryContent .ProductActionAdd a.btn:hover,
+#TagProducts .ProductActionAdd a.btn:hover{ background-color: darken(@color-category-list-buttons, 5%); }
+
+.CompareButton input{ background-color: @color-compare-selected-button; border-color:darken(@color-compare-selected-button, 5%); }
+.CompareButton input:hover{ background-color: darken(@color-compare-selected-button, 5%); }
+
+
+/* Product Page */
+#ProductDetails h1{ color: @color-product-title; }
+.productPage .PriceRow.p-price{ color:@color-product-price; }
+#ProductDescription h2, 
+#ProductDescription,
+#ProductDescription a{ color:@color-product-description; }
+.ProductAddToCart .BulkDiscount .AddCartButton{ background-color:@color-add-to-cart-button; border-color:darken(@color-add-to-cart-button, 5%); }
+.ProductAddToCart .BulkDiscount .AddCartButton:hover{ background-color: darken(@color-add-to-cart-button, 5%); }
+.ProductAddToCart #SideProductAddToWishList .wishTrigger { background-color:@color-add-to-wishlist-button; border-color:darken(@color-add-to-wishlist-button, 5%); }
+.ProductAddToCart #SideProductAddToWishList .wishTrigger:hover{ background-color: darken(@color-add-to-wishlist-button, 5%); }
+
+
+/* Footer */
+.footer-main{ background-color:@color-footer-background; }
+.footer-main h4{ color: @color-column-headings; }
+.newsletter-subscription h4 { color: @color-newsletter-text; }
+.footer-main a{ color: @color-footer-text; }
+.footer-main a:hover{ color: darken(@color-footer-text,10%); }
+
+.footer-links,
+.footer-links a{ background-color:@color-footer-bar-background; color: @color-footer-bar-text; }
+.footer-links a,
+.footer-links a:hover{ color: @color-footer-bar-text; }

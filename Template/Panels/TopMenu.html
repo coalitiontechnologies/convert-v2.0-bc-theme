@@ -1,0 +1,31 @@
+%%GLOBAL_OptimizerLinkScript%%
+<div class="TopMenu">
+    <div class="inner clearfix">
+        <ul class="topLinks" style="display:%%GLOBAL_HidePurchasingOptions%%">
+            <li %%GLOBAL_ShowStorePhoneNumber%% class="callLink">%%LNG_HC_calluson%%: <a href="tel:%%GLOBAL_StorePhoneNumber%%">%%GLOBAL_StorePhoneNumber%%</a></li>
+            <li style="%%GLOBAL_LiveChatCodeEnabled%%" class="HeaderLiveChat">
+                %%GLOBAL_LiveChatCode%%
+            </li>
+            <li style="display:%%GLOBAL_HideAccountOptions%%" class="First">
+                <a href="%%GLOBAL_ShopPath%%/account.php">%%LNG_YourAccount%%</a>
+            </li>
+            %%SNIPPET_TopMenuGiftCertificates%%
+            <li style="display:%%GLOBAL_HideAccountOptions%%" class="loginLink clearfix">
+                <div class="clearfix">%%GLOBAL_LoginOrLogoutText%%</div>
+            </li>
+            <li class="last CartLink" style="display:%%GLOBAL_HideCartOptions%%">
+               <i class="icon" title="View Cart">&nbsp;</i><a href="%%GLOBAL_ShopPathNormal%%/cart.php" title="%%LNG_ViewCart%%"><span>%%GLOBAL_CartItems%%</span></a>
+            </li>
+        </ul>
+        %%Panel.SocialLinks%%
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+ var items = '%%GLOBAL_CartItems%%';
+ if(items == ''){
+  $('.CartLink > a > span').text('(0 Items)');
+ }
+});
+</script>

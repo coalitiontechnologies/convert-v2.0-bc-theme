@@ -1,0 +1,80 @@
+.TopMenu .icon-social {
+    display: inline-block;
+    text-align: left;
+    text-indent: -9999px;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+}
+.footer-main .SocialConnect li a{ display:inline-block; padding: 7px 0px 7px 36px; width: auto; }
+.footer-main .SocialConnect ul{ margin-top: -6px; }
+.icon-social.icon-social-theme { background-image: url('images/sprite.png'); background-repeat: no-repeat; }
+
+
+/* Icons Positions */
+.icon-facebook { background-position: -2px -215px; }
+.icon-facebook:hover,
+.icon-facebook:focus,
+.js-side-account-menu .icon-facebook,
+.js-side-account-menu .icon-facebook:hover{ background-position: -2px -477px; }
+
+.icon-googleplus { background-position: -2px -125px; }
+.icon-googleplus:hover,
+.icon-googleplus:focus{ background-position: -2px -390px; }
+
+.js-side-account-menu .icon-googleplus,
+.js-side-account-menu .icon-googleplus:hover { background-position: -2px -125px; }
+
+.icon-tumblr { background-position: -2px -244px; }
+.icon-tumblr:hover,
+.icon-tumblr:focus,
+.js-side-account-menu .icon-tumblr,
+.js-side-account-menu .icon-tumblr:hover { background-position: -1px -506px; }
+
+.icon-twitter { background-position: -2px -186px; }
+.icon-twitter:hover,
+.icon-twitter:focus,
+.js-side-account-menu .icon-twitter,
+.js-side-account-menu .icon-twitter:hover{ background-position: 0 -448px; }
+
+.icon-pinterest { background-position: -1px -156px; }
+.icon-pinterest:hover,
+.icon-pinterest:focus,
+.js-side-account-menu .icon-pinterest,
+.js-side-account-menu .icon-pinterest:hover { background-position: -1px -419px; }
+
+.icon-stumbleupon { background-position: -2px -302px; }
+.icon-stumbleupon:hover,
+.icon-stumbleupon:focus,
+.js-side-account-menu .icon-stumbleupon,
+.js-side-account-menu .icon-stumbleupon:hover { background-position: -1px -535px; }
+
+.icon-youtube { background-position: -2px -95px; }
+.icon-youtube:hover,
+.icon-youtube:focus,
+.js-side-account-menu .icon-youtube,
+.js-side-account-menu .icon-youtube:hover { background-position: -2px -361px; }
+
+.icon-linkedin { background-position: -2px -273px; }
+.icon-linkedin:hover,
+.icon-linkedin:focus,
+.js-side-account-menu .icon-linkedin,
+.js-side-account-menu .icon-linkedin:hover{ background-position: -1px -564px; }
+
+.icon-rss { background-position: -1px -66px; }
+.icon-rss:hover,
+.icon-rss:focus,
+.js-side-account-menu .icon-rss,
+.js-side-account-menu .icon-rss:hover { background-position: -1px -332px; }
+
+
+
+.js-side-account-menu .icon-facebook,
+.js-side-account-menu .icon-googleplus,
+.js-side-account-menu .icon-tumblr,
+.js-side-account-menu .icon-twitter,
+.js-side-account-menu .icon-pinterest,
+.js-side-account-menu .icon-stumbleupon,
+.js-side-account-menu .icon-youtube,
+.js-side-account-menu .icon-linkedin,
+.js-side-account-menu .icon-rss { padding-left:35px !important; margin-left: 10px; }

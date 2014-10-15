@@ -1,0 +1,57 @@
+%%Panel.HTMLHead%%
+<body class="category">
+    %%Panel.DrawerMenu%%
+    <div class="page">
+        %%Panel.Header%%
+        <div class="main">
+            <div class="inner">
+                %%Panel.CategoryBreadcrumb%%                   
+                %%Panel.WrapperBanner%%
+                %%Banner.TopBanner%%                          
+                <div class="productlist-page">
+                    <div class="headingSort clearfix">      
+                        %%SNIPPET_CategorySortBox%% 
+                        %%GLOBAL_CategoryNameOptimizerScriptTag%%
+                        <h1 class="TitleHeading">%%GLOBAL_CatName%%</h1>
+                        %%GLOBAL_CategoryNameOptimizerNoScriptTag%%
+                        %%Panel.SubCategoriesMobileMenu%%
+                        %%Panel.CategoryPagingTop%%                                                  
+                    </div>
+                    
+                    <div class="Content Wide %%GLOBAL_ExtraCategoryClass%%" id="LayoutColumn1">
+                        <div class="product-nav">
+                            %%SNIPPET_SubCategories%%
+                            <div class="clear"></div>
+                        </div>
+                        %%Panel.CategoryContent%%
+                        %%Panel.CategoryHeading%%                        
+                    </div>
+                </div>
+                <div class="Left fleft">
+                    %%Panel.SideCategoryList%%
+                    %%Panel.SideShopByBrand%%
+                    %%Panel.SideCategoryShopByPrice%%
+                </div>
+                <div class="clear"></div>
+                %%Banner.BottomBanner%%                    
+            </div>
+        </div>
+        %%Panel.Footer%%
+    </div>
+    <script>
+    $(document).ready(function(){
+        
+        var path = location;
+        var path1 = location.pathname;
+            $('.Left #SideCategoryList a').each(function(){
+            var currentLink = $(this).attr('href');
+            if(currentLink == path || currentLink == path1) {
+                $('.Left #SideCategoryList li').removeClass('active');
+                $(this).parent('li').addClass('active');
+            }
+        });     
+        
+    });    
+    </script>
+</body>
+</html>

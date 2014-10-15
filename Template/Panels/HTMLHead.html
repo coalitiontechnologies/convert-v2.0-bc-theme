@@ -1,0 +1,104 @@
+%%Panel.DOCTYPE%%
+
+<html>
+
+<head>
+
+    %%GLOBAL_OptimizerControlScript%%
+
+    <title>%%Page.WindowTitle%%</title>
+
+    <meta charset="%%GLOBAL_CharacterSet%%">
+    <meta name="description" content="%%Page.MetaDescription%%" />
+    <meta name="keywords" content="%%Page.MetaKeywords%%" />
+    %%GLOBAL_AdditionalMetaTags%%
+    %%Page.CanonicalLink%%
+    %%Page.Robots%%
+    %%GLOBAL_HeadFonts%%
+    <link href='//fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic|Enriqueta:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="%%GLOBAL_Favicon%%" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+    //<![CDATA[
+        (function(){
+            // this happens before external dependencies (and dom ready) to reduce page flicker
+            var node, i;
+            for (i = window.document.childNodes.length; i--;) {
+                node = window.document.childNodes[i];
+                if (node.nodeName == 'HTML') {
+                    node.className += ' javascript';
+                }
+            }
+        })();
+    //]]>
+    </script>
+
+    <!-- %% GLOBAL_Stylesheets %% -->
+
+    <link href="https://cdn5.bigcommerce.com/r-f658903e5ffe6136fcd08752c8967dec68066d37/themes/__master/Styles/styles.css" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/iselector.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/flexslider.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/slide-show.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/styles-slide-show.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/social.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/base-forms.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/styles.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/light.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/theme.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/grid.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/custom.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/responsive.css" media="all" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/product.attributes.css" type="text/css" rel="stylesheet" />
+    <link href="https://cdn5.bigcommerce.com/r-a3a7300033c8a05c5be981f7be01bfd5a68f2e62/javascript/jquery/themes/cupertino/ui.all.css" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/product.quickview.css" type="text/css" rel="stylesheet" />
+    <link href="/templates/__custom/Styles/imodal.css" type="text/css" rel="stylesheet" />
+    
+    
+    
+    <!-- Tell the browsers about our RSS feeds -->
+    %%GLOBAL_HeadRSSLinks%%
+
+    <!-- Include visitor tracking code (if any) -->
+    %%GLOBAL_TrackingCode%%
+
+    %%GLOBAL_DesignModeStyleSheet%%
+
+    %%GLOBAL_HeaderImageStyle%%
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="%%GLOBAL_CdnAppPath%%/javascript/menudrop.js?%%GLOBAL_JSCacheToken%%"></script>
+    <script src="%%GLOBAL_CdnAppPath%%/javascript/iselector.js?%%GLOBAL_JSCacheToken%%"></script>
+    <script src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jquery.flexslider.js"></script>
+    <script src="%%GLOBAL_CdnAppPath%%/javascript/viewport.js?%%GLOBAL_JSCacheToken%%"></script>
+
+    <!-- Theme bespoke js -->
+    
+    <script src="/template/js/matchMedia.js"></script>
+    <script src="/template/js/common.js"></script>
+    <script src="/template/js/jquery.autobox.js"></script>
+    <script src="/template/js/init.js"></script>
+    <script src="/template/js/jquery.uniform.min.js"></script>
+    <script src="/template/js/main.js?%%GLOBAL_JSCacheToken%%"></script>
+    <script src="/template/js/quicksearch.js"></script>
+    
+
+    <script>
+    //<![CDATA[
+    config.ShopPath = '%%GLOBAL_ShopPath%%';
+    config.AppPath = ''; // BIG-8939: Deprecated, do not use.
+    config.FastCart = %%GLOBAL_FastCart%%;
+    var ThumbImageWidth = %%GLOBAL_ProductThumbImageWidth%%;
+    var ThumbImageHeight = %%GLOBAL_ProductThumbImageHeight%%;
+    //]]>
+    </script>
+    %%GLOBAL_AdditionalScriptTags%%
+    %%GLOBAL_RTLStyles%%
+
+    <!--[if lt IE 9]>
+    <script src="%%GLOBAL_TPL_PATH%%/js/html5shiv.js"></script>
+    <![endif]-->
+    
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700, 900' rel='stylesheet' type='text/css'>
+    
+</head>
