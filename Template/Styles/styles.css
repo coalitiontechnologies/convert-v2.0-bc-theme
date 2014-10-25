@@ -1389,7 +1389,10 @@ table.General tbody tr.First td { border-top: 0; }
 	padding-bottom: 2%;
 	border-bottom: 5px solid #ebebeb;
 }
+.SearchContainer .ProductList.List li,
 .CategoryContent .ProductList.List li{ margin-left:0; width:100%; }
+.SearchContainer .product-nav.btm{ border:none; }
+
 .CategoryPagination .PagingList, .CategoryPagination .PagingList li {
 	list-style: none;
 	padding: 0;
